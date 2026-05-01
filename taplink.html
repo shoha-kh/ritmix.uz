@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Force HTTPS -->
+    <script>
+        if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+            location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+        }
+    </script>
+
+    <title>Ritmix — Фитнес студия | Чирчик</title>
+    <meta name="description" content="Ritmix — фитнес студия для женщин в Чирчике. Джампинг, йога, зумба, восточные танцы, растяжка, детская гимнастика. Первое занятие от 50 000 сум!">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ritmix.uz/taplink.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ritmix.uz/taplink.html">
+    <meta property="og:title" content="Ritmix — Фитнес студия | Чирчик">
+    <meta property="og:description" content="Джампинг, йога, зумба, восточные танцы, растяжка, детская гимнастика. Первое занятие от 50 000 сум!">
+    <meta property="og:image" content="https://ritmix.uz/og-image.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="uz_UZ">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pink: #ff4d8f;
+            --pink-light: #ff8fab;
+            --bg: #0a0a0a;
+            --card: #161616;
+            --card-hover: #1f1f1f;
+            --border: #2a2a2a;
+            --text: #ffffff;
+            --muted: #888;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 16px 60px;
+        }
+
+        /* Animated background dots */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 600px 400px at 50% -10%, rgba(255,77,143,0.12) 0%, transparent 70%),
+                radial-gradient(ellipse 400px 300px at 100% 80%, rgba(255,143,171,0.07) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+
+        /* Language switcher */
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 28px;
+            align-self: flex-end;
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            border: 2px solid var(--border);
+            background: var(--card);
+            color: var(--muted);
+            transition: all 0.25s;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .lang-btn.active,
+        .lang-btn:hover {
+            background: linear-gradient(135deg, var(--pink), var(--pink-light));
+            border-color: var(--pink);
+            color: #fff;
+        }
+
+        /* Avatar */
+        .avatar-wrap {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--pink), var(--pink-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--pink), 0 20px 60px rgba(255,77,143,0.35);
+            animation: pulse-ring 3s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0%   { box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--pink), 0 20px 60px rgba(255,77,143,0.35); }
+            50%  { box-shadow: 0 0 0 4px var(--bg), 0 0 0 10px rgba(255,77,143,0.4), 0 20px 60px rgba(255,77,143,0.5); }
+            100% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--pink), 0 20px 60px rgba(255,77,143,0.35); }
+        }
+
+        /* Profile info */
+        .profile-name {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #fff 30%, var(--pink-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .profile-city {
+            font-size: 14px;
+            color: var(--muted);
+            text-align: center;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .profile-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,77,143,0.12);
+            border: 1px solid rgba(255,77,143,0.3);
+            color: var(--pink-light);
+            font-size: 13px;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+            font-weight: 600;
+        }
+
+        /* Promo badge */
+        .promo-badge {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(255,77,143,0.15), rgba(255,143,171,0.08));
+            border: 1px solid rgba(255,77,143,0.3);
+            border-radius: 16px;
+            padding: 16px 20px;
+            text-align: center;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promo-badge::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -60%;
+            width: 40%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0%   { left: -60%; }
+            100% { left: 120%; }
+        }
+
+        .promo-badge .promo-label {
+            font-size: 11px;
+            color: var(--pink-light);
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .promo-badge .promo-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .promo-badge .promo-sub {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 3px;
+        }
+
+        /* Section label */
+        .section-label {
+            align-self: flex-start;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: var(--muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+
+        /* Link cards */
+        .links-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text);
+            transition: transform 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            opacity: 0;
+            background: linear-gradient(135deg, rgba(255,77,143,0.08), rgba(255,143,171,0.04));
+            transition: opacity 0.2s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255,77,143,0.5);
+            box-shadow: 0 8px 30px rgba(255,77,143,0.2);
+            background: var(--card-hover);
+        }
+
+        .link-card:hover::after { opacity: 1; }
+
+        .link-card:active { transform: scale(0.98); }
+
+        .link-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .link-icon.tg   { background: linear-gradient(135deg, #229ED9, #1a8bbf); }
+        .link-icon.ig   { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .link-icon.call { background: linear-gradient(135deg, #25d366, #1da851); }
+        .link-icon.map  { background: linear-gradient(135deg, #4285F4, #34A853); }
+        .link-icon.web  { background: linear-gradient(135deg, var(--pink), var(--pink-light)); }
+        .link-icon.wa   { background: linear-gradient(135deg, #25d366, #128c7e); }
+
+        .link-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .link-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .link-sub {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .link-arrow {
+            color: var(--muted);
+            font-size: 16px;
+            flex-shrink: 0;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .link-card:hover .link-arrow {
+            color: var(--pink-light);
+            transform: translateX(3px);
+        }
+
+        /* Primary CTA card */
+        .link-card.primary {
+            background: linear-gradient(135deg, var(--pink), var(--pink-light));
+            border-color: transparent;
+            justify-content: center;
+            padding: 18px 20px;
+        }
+
+        .link-card.primary .link-title {
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .link-card.primary .link-arrow { color: rgba(255,255,255,0.7); }
+
+        .link-card.primary:hover {
+            border-color: transparent;
+            box-shadow: 0 12px 40px rgba(255,77,143,0.45);
+        }
+
+        /* Working hours chip */
+        .hours-chip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 18px;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        .hours-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #25d366;
+            box-shadow: 0 0 8px #25d366;
+            animation: blink 2s infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50%       { opacity: 0.3; }
+        }
+
+        .hours-text {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .hours-text strong { color: #fff; }
+
+        /* Footer */
+        footer {
+            margin-top: 32px;
+            text-align: center;
+            font-size: 12px;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover { color: var(--pink-light); }
+
+        /* Entrance animation */
+        .wrapper > * {
+            animation: fadeUp 0.5s ease-out both;
+        }
+
+        .wrapper > *:nth-child(1)  { animation-delay: 0.05s; }
+        .wrapper > *:nth-child(2)  { animation-delay: 0.1s; }
+        .wrapper > *:nth-child(3)  { animation-delay: 0.15s; }
+        .wrapper > *:nth-child(4)  { animation-delay: 0.2s; }
+        .wrapper > *:nth-child(5)  { animation-delay: 0.25s; }
+        .wrapper > *:nth-child(6)  { animation-delay: 0.3s; }
+        .wrapper > *:nth-child(7)  { animation-delay: 0.35s; }
+        .wrapper > *:nth-child(8)  { animation-delay: 0.4s; }
+        .wrapper > *:nth-child(9)  { animation-delay: 0.45s; }
+        .wrapper > *:nth-child(10) { animation-delay: 0.5s; }
+        .wrapper > *:nth-child(11) { animation-delay: 0.55s; }
+        .wrapper > *:nth-child(12) { animation-delay: 0.6s; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- Language switcher -->
+        <div class="lang-switcher">
+            <span class="lang-btn active">RU</span>
+            <a href="/taplink.html?lang=uz" class="lang-btn" id="uz-btn">O'ZB</a>
+        </div>
+
+        <!-- Avatar -->
+        <div class="avatar-wrap">
+            <div class="avatar">🏋️</div>
+        </div>
+
+        <!-- Profile -->
+        <div class="profile-name">RITMIX.UZ</div>
+        <div class="profile-city">📍 Чирчик, Ташкентская область</div>
+        <div class="profile-tag">✨ Фитнес студия для женщин</div>
+
+        <!-- Promo -->
+        <div class="promo-badge">
+            <div class="promo-label">🎁 Специальное предложение</div>
+            <div class="promo-text">Первое занятие — 50 000 сум</div>
+            <div class="promo-sub">Джампинг · Йога · Зумба · Восточные танцы</div>
+        </div>
+
+        <!-- Hours -->
+        <div class="hours-chip">
+            <div class="hours-dot"></div>
+            <div class="hours-text"><strong>Работаем каждый день</strong> &nbsp;08:00 — 21:00</div>
+        </div>
+
+        <!-- Primary CTA -->
+        <div class="links-group">
+            <a href="https://t.me/ritmix_uz" target="_blank" rel="noopener" class="link-card primary">
+                <div class="link-title">✍️ ЗАПИСАТЬСЯ НА ЗАНЯТИЕ</div>
+                <div class="link-arrow">›</div>
+            </a>
+        </div>
+
+        <!-- Contacts -->
+        <div class="section-label">Связаться с нами</div>
+        <div class="links-group">
+            <a href="tel:+998996646108" class="link-card">
+                <div class="link-icon call">📞</div>
+                <div class="link-text">
+                    <div class="link-title">Позвонить</div>
+                    <div class="link-sub">+998 99 664 61 08</div>
+                </div>
+                <div class="link-arrow">›</div>
+            </a>
+            <a href="https://t.me/ritmix_uz" target="_blank" rel="noopener" class="link-card">
+                <div class="link-icon tg">✈️</div>
+                <div class="link-text">
+                    <div class="link-title">Telegram — запись</div>
+                    <div class="link-sub">@ritmix_uz</div>
+                </div>
+                <div class="link-arrow">›</div>
+            </a>
+            <a href="https://t.me/ritmix_chirchik" target="_blank" rel="noopener" class="link-card">
+                <div class="link-icon tg">📢</div>
+                <div class="link-text">
+                    <div class="link-title">Telegram — наш канал</div>
+                    <div class="link-sub">@ritmix_chirchik</div>
+                </div>
+                <div class="link-arrow">›</div>
+            </a>
+        </div>
+
+        <!-- Social -->
+        <div class="section-label">Мы в соцсетях</div>
+        <div class="links-group">
+            <a href="https://www.instagram.com/ritmix.chirchik" target="_blank" rel="noopener nofollow" class="link-card">
+                <div class="link-icon ig">📷</div>
+                <div class="link-text">
+                    <div class="link-title">Instagram — Чирчик</div>
+                    <div class="link-sub">@ritmix.chirchik</div>
+                </div>
+                <div class="link-arrow">›</div>
+            </a>
+            <a href="https://www.instagram.com/ritmix.tashkent" target="_blank" rel="noopener nofollow" class="link-card">
+                <div class="link-icon ig">📷</div>
+                <div class="link-text">
+                    <div class="link-title">Instagram — Ташкент</div>
+                    <div class="link-sub">@ritmix.tashkent</div>
+                </div>
+                <div class="link-arrow">›</div>
+            </a>
+        </div>
+
+        <!-- Navigation -->
+        <div class="section-label">Информация</div>
+        <div class="links-group">
+            <a href="https://ritmix.uz/" class="link-card">
+                <div class="link-icon web">🌐</div>
+                <div class="link-text">
+                    <div class="link-title">Наш сайт</div>
+                    <div class="link-sub">ritmix.uz — занятия, цены, расписание</div>
+                </div>
+                <div class="link-arrow">›</div>
+            </a>
+            <a href="https://ritmix.uz/#pricing" class="link-card">
+                <div class="link-icon web">💰</div>
+                <div class="link-text">
+                    <div class="link-title">Цены на занятия</div>
+                    <div class="link-sub">Групповые · Индивидуальные · Абонементы</div>
+                </div>
+                <div class="link-arrow">›</div>
+            </a>
+            <a href="https://yandex.uz/maps/-/CPSkeJII" target="_blank" rel="noopener nofollow" class="link-card">
+                <div class="link-icon map">📍</div>
+                <div class="link-text">
+                    <div class="link-title">Как нас найти</div>
+                    <div class="link-sub">9-й микрорайон, 31, Чирчик</div>
+                </div>
+                <div class="link-arrow">›</div>
+            </a>
+        </div>
+
+        <footer>
+            © 2024–2026 Ritmix Fitness Studio<br>
+            <a href="https://ritmix.uz/">ritmix.uz</a> &nbsp;·&nbsp;
+            <a href="https://ritmix.uz/uz.html">O'zbek tilida</a>
+        </footer>
+
+    </div>
+
+    <script>
+        // Language detection & switcher
+        const uzBtn = document.getElementById('uz-btn');
+
+        const content = {
+            ru: {
+                lang: 'ru',
+                title: 'Ritmix — Фитнес студия | Чирчик',
+                name: 'RITMIX.UZ',
+                city: '📍 Чирчик, Ташкентская область',
+                tag: '✨ Фитнес студия для женщин',
+                promoLabel: '🎁 Специальное предложение',
+                promoText: 'Первое занятие — 50 000 сум',
+                promoSub: 'Джампинг · Йога · Зумба · Восточные танцы',
+                hours: '<strong>Работаем каждый день</strong> &nbsp;08:00 — 21:00',
+                cta: '✍️ ЗАПИСАТЬСЯ НА ЗАНЯТИЕ',
+                sec1: 'Связаться с нами',
+                sec2: 'Мы в соцсетях',
+                sec3: 'Информация',
+                links: [
+                    { title: 'Позвонить', sub: '+998 99 664 61 08' },
+                    { title: 'Telegram — запись', sub: '@ritmix_uz' },
+                    { title: 'Telegram — наш канал', sub: '@ritmix_chirchik' },
+                    { title: 'Instagram — Чирчик', sub: '@ritmix.chirchik' },
+                    { title: 'Instagram — Ташкент', sub: '@ritmix.tashkent' },
+                    { title: 'Наш сайт', sub: 'ritmix.uz — занятия, цены, расписание' },
+                    { title: 'Цены на занятия', sub: 'Групповые · Индивидуальные · Абонементы' },
+                    { title: 'Как нас найти', sub: '9-й микрорайон, 31, Чирчик' }
+                ]
+            },
+            uz: {
+                lang: 'uz',
+                title: 'Ritmix — Fitnes studiya | Chirchiq',
+                name: 'RITMIX.UZ',
+                city: '📍 Chirchiq, Toshkent viloyati',
+                tag: '✨ Ayollar uchun fitnes studiyasi',
+                promoLabel: '🎁 Maxsus taklif',
+                promoText: 'Birinchi mashg\'ulot — 50 000 so\'m',
+                promoSub: 'Jumping · Yoga · Zumba · Sharq raqslari',
+                hours: '<strong>Har kuni ishlaymiz</strong> &nbsp;08:00 — 21:00',
+                cta: '✍️ MASHG\'ULOTGA YOZILISH',
+                sec1: 'Biz bilan bog\'laning',
+                sec2: 'Ijtimoiy tarmoqlar',
+                sec3: 'Ma\'lumot',
+                links: [
+                    { title: 'Qo\'ng\'iroq qilish', sub: '+998 99 664 61 08' },
+                    { title: 'Telegram — yozilish', sub: '@ritmix_uz' },
+                    { title: 'Telegram — kanalimiz', sub: '@ritmix_chirchik' },
+                    { title: 'Instagram — Chirchiq', sub: '@ritmix.chirchik' },
+                    { title: 'Instagram — Toshkent', sub: '@ritmix.tashkent' },
+                    { title: 'Veb-saytimiz', sub: 'ritmix.uz — mashg\'ulotlar, narxlar' },
+                    { title: 'Mashg\'ulot narxlari', sub: 'Guruhli · Individual · Abonementlar' },
+                    { title: 'Manzilimiz', sub: '9-mikrorayon, 31, Chirchiq' }
+                ]
+            }
+        };
+
+        function applyLang(lang) {
+            const d = content[lang];
+            document.documentElement.lang = d.lang;
+            document.title = d.title;
+
+            document.querySelector('.profile-name').textContent = d.name;
+            document.querySelector('.profile-city').textContent = d.city;
+            document.querySelector('.profile-tag').textContent = d.tag;
+            document.querySelector('.promo-label').textContent = d.promoLabel;
+            document.querySelector('.promo-text').textContent = d.promoText;
+            document.querySelector('.promo-sub').textContent = d.promoSub;
+            document.querySelector('.hours-text').innerHTML = d.hours;
+            document.querySelector('.link-card.primary .link-title').textContent = d.cta;
+
+            const labels = document.querySelectorAll('.section-label');
+            labels[0].textContent = d.sec1;
+            labels[1].textContent = d.sec2;
+            labels[2].textContent = d.sec3;
+
+            const cards = document.querySelectorAll('.links-group:not(:first-of-type) .link-card:not(.primary)');
+            cards.forEach((card, i) => {
+                if (d.links[i]) {
+                    card.querySelector('.link-title').textContent = d.links[i].title;
+                    card.querySelector('.link-sub').textContent = d.links[i].sub;
+                }
+            });
+
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            if (lang === 'ru') {
+                document.querySelector('.lang-btn:first-child').classList.add('active');
+            } else {
+                uzBtn.classList.add('active');
+            }
+
+            localStorage.setItem('ritmix_lang', lang);
+        }
+
+        // Handle O'ZB button click
+        uzBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            applyLang('uz');
+        });
+
+        document.querySelector('.lang-btn:first-child').addEventListener('click', function() {
+            applyLang('ru');
+        });
+
+        // Auto-detect on load
+        const saved = localStorage.getItem('ritmix_lang');
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (saved === 'uz' || (!saved && browserLang.startsWith('uz'))) {
+            applyLang('uz');
+        }
+    </script>
+</body>
+</html>
