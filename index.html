@@ -399,6 +399,30 @@
             color: #ff4d8f;
         }
 
+        /* Language button */
+        .lang-btn {
+            display: inline-block;
+            padding: 7px 18px;
+            background: linear-gradient(135deg, #ff4d8f, #ff8fab);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: opacity 0.2s;
+            white-space: nowrap;
+        }
+
+        .lang-btn:hover { opacity: 0.85; }
+
+        /* Header right group */
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
         /* Hide hamburger menu on desktop */
         .menu-toggle {
             display: none;
@@ -824,6 +848,11 @@
                 font-size: 22px;
             }
 
+            .lang-btn {
+                padding: 6px 14px;
+                font-size: 11px;
+            }
+
             nav {
                 position: fixed;
                 top: 60px;
@@ -848,16 +877,24 @@
             }
 
             nav a {
-                margin: 10px 0;
-                font-size: 16px;
-                padding: 10px 20px;
-                width: 100%;
+                display: inline-block;
+                width: auto;
+                margin: 6px 0;
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: 1.5px;
+                padding: 14px 20px;
                 text-align: center;
-                border-bottom: 1px solid #222;
+                border-radius: 12px;
+                border: 1px solid #222;
+                background: #161616;
+                transition: background 0.2s, border-color 0.2s, color 0.2s;
             }
 
-            nav a:last-child {
-                border-bottom: none;
+            nav a:hover {
+                background: rgba(255,77,143,0.12);
+                border-color: rgba(255,77,143,0.4);
+                color: #ff8fab;
             }
 
             /* Hamburger Menu */
@@ -1111,19 +1148,21 @@
 <body>
     <header>
         <div class="logo">RITMIX.UZ</div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
         <nav id="mobile-nav">
             <a href="#hero" onclick="closeMenu()">ГЛАВНАЯ</a>
             <a href="#trampoline" onclick="closeMenu()">БАТУТЫ</a>
             <a href="#classes" onclick="closeMenu()">ЗАНЯТИЯ</a>
             <a href="#pricing" onclick="closeMenu()">ЦЕНЫ</a>
             <a href="#contact" onclick="closeMenu()">КОНТАКТЫ</a>
-            <a href="/uz.html" onclick="closeMenu()" style="background: linear-gradient(135deg,#ff4d8f,#ff8fab); padding: 7px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-left: 10px;">O'ZB</a>
         </nav>
+        <div class="header-right">
+            <a href="/uz.html" class="lang-btn">O'ZB</a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
 
     <div class="container">
