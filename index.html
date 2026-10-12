@@ -28,17 +28,20 @@
     <meta property="og:url" content="https://ritmix.uz/">
     <meta property="og:title" content="Ritmix Чирчик — Фитнес Студия для Женщин | Джампинг, Йога, Батут">
     <meta property="og:description" content="Фитнес студия Ritmix в Чирчике. Джампинг, йога, растяжка, зумба, восточные танцы, детская гимнастика. Первое занятие от 50 000 сум! Запишитесь сейчас.">
-    <meta property="og:image" content="https://ritmix.uz/og-image.jpg">
+    <meta property="og:image" content="https://ritmix.uz/images/web-app-manifest-512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Ritmix — фитнес-студия для женщин в Чирчике">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:locale:alternate" content="uz_UZ">
     <meta property="og:site_name" content="Ritmix Fitness Studio">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ritmix.uz/">
-    <meta property="twitter:title" content="Ritmix Чирчик - Фитнес Студия для Женщин">
-    <meta property="twitter:description" content="Фитнес на мини батуте, джампинг, йога, растяжка для женщин в Чирчике">
-    <meta property="twitter:image" content="https://ritmix.uz/og-image.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://ritmix.uz/">
+    <meta name="twitter:title" content="Ritmix Чирчик - Фитнес Студия для Женщин">
+    <meta name="twitter:description" content="Фитнес на мини батуте, джампинг, йога, растяжка для женщин в Чирчике">
+    <meta name="twitter:image" content="https://ritmix.uz/images/web-app-manifest-512x512.png">
     
     <!-- Geo Tags -->
     <meta name="geo.region" content="UZ-TK">
@@ -61,157 +64,196 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <!-- Schema.org markup for Google -->
+    <!-- Schema.org: studio + website + page (single linked entity) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SportsActivityLocation",
-      "name": "Ritmix Fitness Studio",
-      "alternateName": "Ритмикс Фитнес Студия",
-      "image": "https://ritmix.uz/logo.png",
-      "description": "Фитнес студия для женщин в Чирчике. Фитнес на мини батуте, джампинг, йога, растяжка, восточные танцы, зумба, детская гимнастика.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "9-й микрорайон, 31",
-        "addressLocality": "Чирчик",
-        "addressRegion": "Ташкентская область",
-        "postalCode": "111700",
-        "addressCountry": "UZ"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "41.469722",
-        "longitude": "69.582222"
-      },
-      "telephone": "+998996646108",
-      "email": "info@ritmix.uz",
-      "url": "https://ritmix.uz",
-      "sameAs": [
-        "https://www.instagram.com/ritmix.chirchik",
-        "https://www.instagram.com/ritmix.tashkent",
-        "https://t.me/ritmix_chirchik",
-        "https://t.me/ritmix_uz"
-      ],
-      "priceRange": "50000-950000 UZS",
-      "openingHours": "Mo-Su 08:00-21:00",
-      "amenityFeature": [
+      "@graph": [
         {
-          "@type": "LocationFeatureSpecification",
-          "name": "Фитнес на мини батуте",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Групповые занятия",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Индивидуальные занятия",
-          "value": true
-        }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Услуги фитнес студии",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Джампинг - групповое занятие",
-              "description": "Интенсивная тренировка на мини-батутах"
-            },
-            "price": "50000",
-            "priceCurrency": "UZS"
+          "@type": "ExerciseGym",
+          "@id": "https://ritmix.uz/#studio",
+          "name": "Ritmix",
+          "alternateName": [
+            "Ritmix Fitness Studio",
+            "Ritmix Chirchiq",
+            "Ritmix Чирчик",
+            "Ритмикс",
+            "Ритмикс Чирчик",
+            "Ritmix fitnes studiyasi"
+          ],
+          "description": "Ritmix — женская фитнес-студия в городе Чирчик (Ташкентская область, Узбекистан). Джампинг (фитнес на мини-батутах), йога, растяжка, зумба, восточные танцы, фитнес микс, детская гимнастика и персональные тренировки. Работает ежедневно с 08:00 до 21:00.",
+          "url": "https://ritmix.uz/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ritmix.uz/images/web-app-manifest-512x512.png",
+            "width": 512,
+            "height": 512
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Фитнес микс - групповое занятие",
-              "description": "Комплексная тренировка"
-            },
-            "price": "50000",
-            "priceCurrency": "UZS"
+          "image": "https://ritmix.uz/images/web-app-manifest-512x512.png",
+          "telephone": "+998996646108",
+          "email": "info@ritmix.uz",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "9-й микрорайон, 31",
+            "addressLocality": "Чирчик",
+            "addressRegion": "Ташкентская область",
+            "postalCode": "111700",
+            "addressCountry": "UZ"
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Йога - групповое занятие",
-              "description": "Развитие гибкости и баланса"
-            },
-            "price": "50000",
-            "priceCurrency": "UZS"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.469722,
+            "longitude": 69.582222
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Чирчик"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "21:00"
+          },
+          "priceRange": "50000-3840000 UZS",
+          "currenciesAccepted": "UZS",
+          "knowsLanguage": [
+            "ru",
+            "uz"
+          ],
+          "audience": {
+            "@type": "PeopleAudience",
+            "suggestedGender": "female"
+          },
+          "sameAs": [
+            "https://www.instagram.com/ritmix.chirchik",
+            "https://www.instagram.com/ritmix.tashkent",
+            "https://t.me/ritmix_chirchik",
+            "https://t.me/ritmix_uz"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Услуги фитнес-студии Ritmix",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Джампинг — групповое занятие",
+                  "description": "Кардио-тренировка на мини-батутах"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Фитнес микс — групповое занятие",
+                  "description": "Комплексная кардио и силовая тренировка"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Растяжка — групповое занятие",
+                  "description": "Развитие гибкости и профилактика травм"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Йога — групповое занятие",
+                  "description": "Гибкость, осанка, снятие напряжения"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Восточные танцы — групповое занятие",
+                  "description": "Пластика и женственность"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Зумба — групповое занятие",
+                  "description": "Танцевальная тренировка под латиноамериканские ритмы"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Детская гимнастика",
+                  "description": "Координация, гибкость и физическое развитие детей"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Персональная тренировка",
+                  "description": "Индивидуальная программа под ваши цели"
+                },
+                "price": "120000",
+                "priceCurrency": "UZS"
+              }
+            ]
           }
-        ]
-      }
-    }
-    </script>
-
-    <!-- Local Business Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Ritmix Fitness Studio",
-      "image": "https://ritmix.uz/logo.png",
-      "@id": "https://ritmix.uz",
-      "url": "https://ritmix.uz",
-      "telephone": "+998996646108",
-      "priceRange": "50000-950000 UZS",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "9-й микрорайон, 31",
-        "addressLocality": "Чирчик",
-        "addressRegion": "Ташкентская область",
-        "postalCode": "111700",
-        "addressCountry": "UZ"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 41.469722,
-        "longitude": 69.582222
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "08:00",
-        "closes": "21:00"
-      },
-      "sameAs": [
-        "https://www.instagram.com/ritmix.chirchik",
-        "https://www.instagram.com/ritmix.tashkent",
-        "https://t.me/ritmix_chirchik"
-      ]
-    }
-    </script>
-
-    <!-- WebSite Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Ritmix Fitness Studio",
-      "url": "https://ritmix.uz",
-      "inLanguage": ["ru", "uz"],
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://ritmix.uz/?s={search_term_string}"
         },
-        "query-input": "required name=search_term_string"
-      }
+        {
+          "@type": "WebSite",
+          "@id": "https://ritmix.uz/#website",
+          "url": "https://ritmix.uz/",
+          "name": "Ritmix",
+          "inLanguage": [
+            "ru",
+            "uz"
+          ],
+          "publisher": {
+            "@id": "https://ritmix.uz/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://ritmix.uz/#webpage",
+          "url": "https://ritmix.uz/",
+          "name": "Ritmix Чирчик — фитнес-студия для женщин",
+          "inLanguage": "ru",
+          "isPartOf": {
+            "@id": "https://ritmix.uz/#website"
+          },
+          "about": {
+            "@id": "https://ritmix.uz/#studio"
+          },
+          "primaryImageOfPage": "https://ritmix.uz/images/web-app-manifest-512x512.png"
+        }
+      ]
     }
     </script>
 
@@ -286,35 +328,6 @@
           }
         }
       ]
-    }
-    </script>
-
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Главная",
-        "item": "https://ritmix.uz/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Фитнес на мини батуте",
-        "item": "https://ritmix.uz/#trampoline"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Занятия",
-        "item": "https://ritmix.uz/#classes"
-      },{
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Контакты",
-        "item": "https://ritmix.uz/#contact"
-      }]
     }
     </script>
 
@@ -822,6 +835,67 @@
             box-shadow: 0 10px 30px rgba(255,77,143,0.4);
         }
 
+        /* FAQ Section */
+        #faq {
+            background: #0a0a0a;
+            padding: 0 100px;
+        }
+
+        .faq-content {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .faq-content h2 {
+            font-size: 56px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, #1a1a1a, #151515);
+            border: 1px solid #222;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 25px 30px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover { color: #ff4d8f; }
+
+        .faq-question .arrow {
+            color: #ff4d8f;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-question.open .arrow { transform: rotate(180deg); }
+
+        .faq-answer {
+            display: none;
+            padding: 0 30px 25px;
+            color: #aaa;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .faq-answer.open { display: block; }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -979,6 +1053,7 @@
             #trampoline,
             #classes,
             #pricing,
+            #faq,
             #contact {
                 padding: 40px 20px;
             }
@@ -1027,6 +1102,7 @@
 
             .classes-content h2,
             .pricing-content h2,
+            .faq-content h2,
             .contact-content h2 {
                 font-size: 32px;
                 margin-bottom: 40px;
@@ -1075,6 +1151,17 @@
 
             .pricing-card li {
                 font-size: 13px;
+            }
+
+            /* FAQ Section */
+            .faq-question {
+                font-size: 15px;
+                padding: 20px;
+            }
+
+            .faq-answer {
+                padding: 0 20px 20px;
+                font-size: 14px;
             }
 
             /* Contact Section */
@@ -1132,6 +1219,7 @@
             .trampoline-text h2,
             .classes-content h2,
             .pricing-content h2,
+            .faq-content h2,
             .contact-content h2 {
                 font-size: 26px;
             }
@@ -1438,6 +1526,93 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="faq-content">
+                <h2>ЧАСТЫЕ <span style="color: #ff4d8f;">ВОПРОСЫ</span></h2>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Сколько стоит первое занятие в Ritmix?
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        Первое пробное занятие стоит всего 50 000 сум. Запишитесь через Telegram @ritmix_uz или по телефону +998 99 664 61 08.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Какие направления есть в фитнес студии Ritmix?
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        В студии Ritmix доступны: джампинг (фитнес на мини батуте), йога, растяжка, восточные танцы, зумба, фитнес микс, детская гимнастика и персональные тренировки.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Где находится фитнес студия Ritmix в Чирчике?
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        Ritmix находится по адресу: 9-й микрорайон, 31, Чирчик, Ташкентская область, Узбекистан. Работаем ежедневно с 08:00 до 21:00.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Эффективен ли фитнес на мини батуте для похудения?
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        Да! Всего 10 минут прыжков заменяют 30 минут бега и сжигают до 1000 калорий за тренировку. Это одно из самых эффективных кардио упражнений, безопасное для суставов.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Есть ли детские занятия в Ritmix?
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        Да, в Ritmix есть детская гимнастика. Занятия развивают координацию, гибкость и физическую форму детей. Стоимость от 50 000 сум за занятие.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Как записаться в фитнес студию Ritmix?
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        Записаться можно через Telegram: @ritmix_uz, в Instagram: @ritmix.chirchik или по телефону +998 99 664 61 08. Работаем каждый день.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Какой режим работы у Ritmix?
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        Фитнес студия Ritmix работает ежедневно, без выходных, с 08:00 до 21:00.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Есть ли индивидуальные тренировки?
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        Да, в Ritmix доступны персональные тренировки с индивидуальной программой. Стоимость от 120 000 до 160 000 сум за занятие в зависимости от направления.
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="contact-content">
@@ -1469,16 +1644,16 @@
                 </div>
 
                 <div class="social-links">
-                    <a href="https://www.instagram.com/ritmix.chirchik" class="social-link" target="_blank" rel="noopener nofollow">
+                    <a href="https://www.instagram.com/ritmix.chirchik" class="social-link" target="_blank" rel="noopener me">
                         📷 Instagram Чирчик
                     </a>
-                    <a href="https://www.instagram.com/ritmix.tashkent" class="social-link" target="_blank" rel="noopener nofollow">
+                    <a href="https://www.instagram.com/ritmix.tashkent" class="social-link" target="_blank" rel="noopener me">
                         📷 Instagram Ташкент
                     </a>
-                    <a href="https://t.me/ritmix_chirchik" class="social-link" target="_blank" rel="noopener nofollow">
+                    <a href="https://t.me/ritmix_chirchik" class="social-link" target="_blank" rel="noopener me">
                         💬 Telegram Канал
                     </a>
-                    <a href="https://t.me/ritmix_uz" class="social-link" target="_blank" rel="noopener nofollow">
+                    <a href="https://t.me/ritmix_uz" class="social-link" target="_blank" rel="noopener me">
                         ✍️ Записаться в Telegram
                     </a>
                 </div>
@@ -1500,6 +1675,13 @@
             const toggle = document.querySelector('.menu-toggle');
             nav.classList.remove('active');
             toggle.classList.remove('active');
+        }
+
+        // FAQ accordion
+        function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            btn.classList.toggle('open');
+            answer.classList.toggle('open');
         }
 
         // Smooth scroll for navigation

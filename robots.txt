@@ -1,0 +1,25 @@
+# ritmix.uz — открыт для поисковиков и ИИ-ассистентов
+
+User-agent: *
+Allow: /
+
+# Поисковые и ИИ-краулеры (явно разрешены)
+User-agent: Googlebot
+User-agent: Google-Extended
+User-agent: Bingbot
+User-agent: YandexBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: DuckAssistBot
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://ritmix.uz/sitemap.xml

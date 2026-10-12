@@ -26,17 +26,20 @@
     <meta property="og:url" content="https://ritmix.uz/uz.html">
     <meta property="og:title" content="Ritmix Chirchiq — Ayollar uchun Fitnes Studiya | Jumping, Yoga, Mini Tramplin">
     <meta property="og:description" content="Chirchiqda fitnes studiyasi. Jumping, mini tramplin, yoga, cho'zilish, zumba, sharq raqslari. Birinchi mashg'ulot 50 000 so'mdan!">
-    <meta property="og:image" content="https://ritmix.uz/og-image.jpg">
+    <meta property="og:image" content="https://ritmix.uz/images/web-app-manifest-512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Ritmix — Chirchiqdagi ayollar uchun fitnes studiya">
     <meta property="og:locale" content="uz_UZ">
     <meta property="og:locale:alternate" content="ru_RU">
     <meta property="og:site_name" content="Ritmix Fitness Studio">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ritmix.uz/uz.html">
-    <meta property="twitter:title" content="Ritmix Chirchiq — Ayollar uchun Fitnes Studiya">
-    <meta property="twitter:description" content="Jumping, mini tramplin, yoga, cho'zilish — ayollar uchun Chirchiqda">
-    <meta property="twitter:image" content="https://ritmix.uz/og-image.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://ritmix.uz/uz.html">
+    <meta name="twitter:title" content="Ritmix Chirchiq — Ayollar uchun Fitnes Studiya">
+    <meta name="twitter:description" content="Jumping, mini tramplin, yoga, cho'zilish — ayollar uchun Chirchiqda">
+    <meta name="twitter:image" content="https://ritmix.uz/images/web-app-manifest-512x512.png">
 
     <!-- Geo Tags -->
     <meta name="geo.region" content="UZ-TK">
@@ -57,102 +60,195 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Schema.org: SportsActivityLocation -->
+    <!-- Schema.org: studio + website + page (single linked entity) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SportsActivityLocation",
-      "name": "Ritmix Fitness Studio",
-      "alternateName": "Ritmix Fitnes Studiyasi",
-      "image": "https://ritmix.uz/logo.png",
-      "description": "Chirchiqda ayollar uchun fitnes studiyasi. Mini tramplin, jumping, yoga, cho'zilish, sharq raqslari, zumba, bolalar gimnastikasi.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "9-mikrorayon, 31",
-        "addressLocality": "Chirchiq",
-        "addressRegion": "Toshkent viloyati",
-        "postalCode": "111700",
-        "addressCountry": "UZ"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "41.469722",
-        "longitude": "69.582222"
-      },
-      "telephone": "+998996646108",
-      "email": "info@ritmix.uz",
-      "url": "https://ritmix.uz/uz.html",
-      "sameAs": [
-        "https://www.instagram.com/ritmix.chirchik",
-        "https://www.instagram.com/ritmix.tashkent",
-        "https://t.me/ritmix_chirchik",
-        "https://t.me/ritmix_uz"
-      ],
-      "priceRange": "50000-950000 UZS",
-      "openingHours": "Mo-Su 08:00-21:00",
-      "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "Mini tramplin", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Guruhli mashg'ulotlar", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Individual mashg'ulotlar", "value": true }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Fitnes studiya xizmatlari",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Jumping — guruhli mashg'ulot", "description": "Mini-tramplinlarda intensiv mashg'ulot" },
-            "price": "50000", "priceCurrency": "UZS"
+      "@graph": [
+        {
+          "@type": "ExerciseGym",
+          "@id": "https://ritmix.uz/#studio",
+          "name": "Ritmix",
+          "alternateName": [
+            "Ritmix Fitness Studio",
+            "Ritmix Chirchiq",
+            "Ritmix Чирчик",
+            "Ритмикс",
+            "Ритмикс Чирчик",
+            "Ritmix fitnes studiyasi"
+          ],
+          "description": "Ritmix — Chirchiq shahridagi (Toshkent viloyati, O'zbekiston) ayollar uchun fitnes studiyasi. Jumping (mini tramplin), yoga, cho'zilish, zumba, sharq raqslari, fitnes miks, bolalar gimnastikasi va shaxsiy mashg'ulotlar. Har kuni 08:00 dan 21:00 gacha ishlaydi.",
+          "url": "https://ritmix.uz/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ritmix.uz/images/web-app-manifest-512x512.png",
+            "width": 512,
+            "height": 512
           },
-          {
-            "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Fitnes Miks — guruhli mashg'ulot", "description": "Kompleks mashg'ulot" },
-            "price": "50000", "priceCurrency": "UZS"
+          "image": "https://ritmix.uz/images/web-app-manifest-512x512.png",
+          "telephone": "+998996646108",
+          "email": "info@ritmix.uz",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "9-mikrorayon, 31",
+            "addressLocality": "Chirchiq",
+            "addressRegion": "Toshkent viloyati",
+            "postalCode": "111700",
+            "addressCountry": "UZ"
           },
-          {
-            "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Yoga — guruhli mashg'ulot", "description": "Egiluvchanlik va muvozanatni rivojlantirish" },
-            "price": "50000", "priceCurrency": "UZS"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.469722,
+            "longitude": 69.582222
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Chirchiq"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "21:00"
+          },
+          "priceRange": "50000-3840000 UZS",
+          "currenciesAccepted": "UZS",
+          "knowsLanguage": [
+            "ru",
+            "uz"
+          ],
+          "audience": {
+            "@type": "PeopleAudience",
+            "suggestedGender": "female"
+          },
+          "sameAs": [
+            "https://www.instagram.com/ritmix.chirchik",
+            "https://www.instagram.com/ritmix.tashkent",
+            "https://t.me/ritmix_chirchik",
+            "https://t.me/ritmix_uz"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Ritmix fitnes studiyasi xizmatlari",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Jumping — guruhli mashg'ulot",
+                  "description": "Mini-tramplinlarda kardio mashg'ulot"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Fitnes Miks — guruhli mashg'ulot",
+                  "description": "Kardio va kuch mashqlari"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Cho'zilish — guruhli mashg'ulot",
+                  "description": "Egiluvchanlikni oshirish"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Yoga — guruhli mashg'ulot",
+                  "description": "Egiluvchanlik va muvozanat"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Sharq raqslari — guruhli mashg'ulot",
+                  "description": "Plastika va nafislik"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Zumba — guruhli mashg'ulot",
+                  "description": "Lotin-Amerika ritmlarida raqsli mashg'ulot"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Bolalar gimnastikasi",
+                  "description": "Bolalar uchun rivojlantiruvchi mashg'ulotlar"
+                },
+                "price": "50000",
+                "priceCurrency": "UZS"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Shaxsiy mashg'ulot",
+                  "description": "Individual dastur"
+                },
+                "price": "120000",
+                "priceCurrency": "UZS"
+              }
+            ]
           }
-        ]
-      }
-    }
-    </script>
-
-    <!-- LocalBusiness Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Ritmix Fitness Studio",
-      "image": "https://ritmix.uz/logo.png",
-      "@id": "https://ritmix.uz",
-      "url": "https://ritmix.uz/uz.html",
-      "telephone": "+998996646108",
-      "priceRange": "50000-950000 UZS",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "9-mikrorayon, 31",
-        "addressLocality": "Chirchiq",
-        "addressRegion": "Toshkent viloyati",
-        "postalCode": "111700",
-        "addressCountry": "UZ"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 41.469722,
-        "longitude": 69.582222
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "08:00",
-        "closes": "21:00"
-      },
-      "sameAs": [
-        "https://www.instagram.com/ritmix.chirchik",
-        "https://www.instagram.com/ritmix.tashkent",
-        "https://t.me/ritmix_chirchik"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://ritmix.uz/#website",
+          "url": "https://ritmix.uz/",
+          "name": "Ritmix",
+          "inLanguage": [
+            "ru",
+            "uz"
+          ],
+          "publisher": {
+            "@id": "https://ritmix.uz/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://ritmix.uz/uz.html#webpage",
+          "url": "https://ritmix.uz/uz.html",
+          "name": "Ritmix Chirchiq — ayollar uchun fitnes studiya",
+          "inLanguage": "uz",
+          "isPartOf": {
+            "@id": "https://ritmix.uz/#website"
+          },
+          "about": {
+            "@id": "https://ritmix.uz/#studio"
+          },
+          "primaryImageOfPage": "https://ritmix.uz/images/web-app-manifest-512x512.png"
+        }
       ]
     }
     </script>
@@ -228,31 +324,6 @@
           }
         }
       ]
-    }
-    </script>
-
-    <!-- BreadcrumbList Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Bosh sahifa", "item": "https://ritmix.uz/uz.html" },
-        { "@type": "ListItem", "position": 2, "name": "Tramplinlar", "item": "https://ritmix.uz/uz.html#trampoline" },
-        { "@type": "ListItem", "position": 3, "name": "Mashg'ulotlar", "item": "https://ritmix.uz/uz.html#classes" },
-        { "@type": "ListItem", "position": 4, "name": "Aloqa", "item": "https://ritmix.uz/uz.html#contact" }
-      ]
-    }
-    </script>
-
-    <!-- WebSite Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Ritmix Fitness Studio",
-      "url": "https://ritmix.uz",
-      "inLanguage": ["ru", "uz"]
     }
     </script>
 
@@ -917,6 +988,19 @@
             .class-card, .pricing-card, .contact-item { padding: 25px 15px; }
         }
     </style>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108998449', 'ym');
+
+        ym(108998449, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/108998449" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <header>
@@ -1271,6 +1355,26 @@
                         Ha, individual dastur bilan shaxsiy mashg'ulotlar mavjud. Narxi yo'nalishga qarab 120 000 dan 160 000 so'mgacha bo'ladi.
                     </div>
                 </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Ritmix Chirchiqda qayerda joylashgan?
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        Ritmix manzili: 9-mikrorayon, 31, Chirchiq, Toshkent viloyati, O'zbekiston. Har kuni 08:00 dan 21:00 gacha ishlaymiz.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Ritmix fitnes studiyasiga qanday yozilish mumkin?
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        Telegram: @ritmix_uz, Instagram: @ritmix.chirchik yoki +998 99 664 61 08 raqami orqali yozilishingiz mumkin. Har kuni qabul qilamiz.
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1300,16 +1404,16 @@
                 </div>
 
                 <div class="social-links">
-                    <a href="https://www.instagram.com/ritmix.chirchik" class="social-link" target="_blank" rel="noopener nofollow">
+                    <a href="https://www.instagram.com/ritmix.chirchik" class="social-link" target="_blank" rel="noopener me">
                         📷 Instagram Chirchiq
                     </a>
-                    <a href="https://www.instagram.com/ritmix.tashkent" class="social-link" target="_blank" rel="noopener nofollow">
+                    <a href="https://www.instagram.com/ritmix.tashkent" class="social-link" target="_blank" rel="noopener me">
                         📷 Instagram Toshkent
                     </a>
-                    <a href="https://t.me/ritmix_chirchik" class="social-link" target="_blank" rel="noopener nofollow">
+                    <a href="https://t.me/ritmix_chirchik" class="social-link" target="_blank" rel="noopener me">
                         💬 Telegram Kanal
                     </a>
-                    <a href="https://t.me/ritmix_uz" class="social-link" target="_blank" rel="noopener nofollow">
+                    <a href="https://t.me/ritmix_uz" class="social-link" target="_blank" rel="noopener me">
                         ✍️ Telegramda yozilish
                     </a>
                 </div>
